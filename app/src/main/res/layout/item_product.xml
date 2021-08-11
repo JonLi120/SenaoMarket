@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="136dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="6dp"
+    android:background="@color/white"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            tools:src="@mipmap/ic_launcher"
+            app:layout_constraintDimensionRatio="w,1:1.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnCart"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_shopping_cart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ic_favorite"
+            app:layout_constraintEnd_toStartOf="@id/btnCart"
+            app:layout_constraintBottom_toBottomOf="@id/btnCart" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:ellipsize="end"
+            tools:text="iphone 11 256GB "
+            app:layout_constraintStart_toEndOf="@id/imgPhoto"
+            app:layout_constraintEnd_toEndOf="@id/btnCart"
+            app:layout_constraintTop_toTopOf="@id/imgPhoto"
+            app:layout_constraintBottom_toTopOf="@id/tvPrice"/>
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/price_color"
+            android:textStyle="bold"
+            tools:text="$123,321"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@id/imgPhoto"
+            app:layout_constraintEnd_toEndOf="@id/btnCart"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            app:layout_constraintBottom_toTopOf="@id/btnFavorite"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
